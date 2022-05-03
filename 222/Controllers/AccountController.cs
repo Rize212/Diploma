@@ -19,9 +19,5 @@ namespace _222.Controllers
         {
             return View();
         }
-        public IActionResult Home()
-        {
-            return View();
-        }
     }
 }

@@ -1,16 +1,14 @@
 ﻿
 body {
-    background-size: cover;
-    background-color: #000000;
+    position:relative;
+ 
 }
 
+section {
+   
+}
 header {
-    margin-left: 4rem;
-    height: 80px;
-    background-size: cover;
-    background-color: #000000;
-    opacity: 30%;
-
+    display: none;
 }
 
 p{
@@ -22,8 +20,8 @@ p{
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #000000 !important;
-    height: auto;
-    width: auto;
+    height: 100vh;
+    width: 100%;
     overflow:hidden;
  }
 
@@ -34,87 +32,90 @@ p{
 }
 
 h1 {
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Cuprum', sans-serif;
     font-size: 48px;
-    font-weight: 700 !important;
+    font-weight: 600 !important;
     font-style: normal;
-    line-height: 73px;
-    color: #000;
+    line-height: 55px;
     margin: 0;
 }
-
+.h1_extra {
+    color: #fff;
+    font-family: 'Cuprum', sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 74px;
+    margin: 0;
+}
 h2 {
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Cuprum', sans-serif;
     font-size: 40px;
     font-weight: 600;
     font-style: normal;
-    line-height: 61px;
-    letter-spacing: 0.1rem;
-   
+    line-height: 46px;
 }
 
 h3 {
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Cuprum', sans-serif;
     font-size: 32px;
     font-weight: 600;
     font-style: normal;
-    line-height: 49px;
-    letter-spacing: 0.1rem;
+    line-height: 37px;
 }
 
 h4 {
-    font-family: 'Titillium Web', sans-serif;
+    color: #fff;
+    font-family: 'Cuprum', sans-serif;
     font-size: 24px;
     font-weight: 600;
     font-style: normal;
-    line-height: 37px;
-    letter-spacing: 0.1rem;
+    line-height: 28px;
 }
 
 .bodyXL {
-    font-family: 'Oxygen', sans-serif;
-    font-size: 24px;
-    font-weight: 300;
-    font-style: normal;
-    line-height: 30px;
-    letter-spacing: 0.1rem;
-    
-}
-
-.bodyXL_bold {
-    font-family: 'Oxygen', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 24px;
     font-weight: 400;
     font-style: normal;
-    line-height: 30px;
-    letter-spacing: 0.1rem;
+    line-height: 33px;
+    letter-spacing: 0.01rem;
+}
+
+.bodyXL_bold {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 33px;
+    letter-spacing: 0.03rem;
 }
 
 .bodyL {
-    font-family: 'Oxygen', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 400;
     font-style: normal;
-    line-height: 23px;
-    letter-spacing: 0.1rem;
+    line-height: 25px;
+    letter-spacing: 0.01rem;
 }
 
 .bodyM {
-    font-family: 'Oxygen', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 400;
     font-style: normal;
-    line-height: 20px;
-    letter-spacing: 0.1rem;
+    line-height: 22px;
+    letter-spacing: 0.01rem;
 }
 
 .bodyS {
-    font-family: 'Oxygen', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
     font-style: normal;
-    line-height: 18px;
-    letter-spacing: 0.1rem;
+    line-height: 19px;
+    letter-spacing: 0.01rem;
 }
 
 button {
@@ -126,24 +127,22 @@ button {
 }
 
 .registration {
-    margin-top: 5%;
     border-radius: 5px;
     height: auto;
 }
 
 input {
-    font-family: 'Oxygen', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     font-weight: 400;
     font-style: normal;
-    line-height: 18px;
-    letter-spacing: 0.1rem;
+    line-height: 19px;
+    letter-spacing: 0.01rem;
     outline: none;
     border: none;
     border-bottom: 1px solid #575757;
     width: 90%;
     padding: 0;
-
     /*Animation*/
     -moz-transition: 0.3s ease all;
     -webkit-transition: 0.3s ease all;

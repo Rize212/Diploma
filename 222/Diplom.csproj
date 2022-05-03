@@ -10,9 +10,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Account\" />
-    <Folder Include="wwwroot\img\" />
+    <Folder Include="wwwroot\img\block2\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\img\" />
+    <Content Remove="wwwroot\img\header\" />
+    <Content Remove="wwwroot\img\block1\" />
+    <Content Remove="wwwroot\img\block2\" />
+    <Content Remove="wwwroot\img\block3\" />
   </ItemGroup>
 </Project>
