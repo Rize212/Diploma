@@ -1,0 +1,145 @@
+﻿body {
+    background: #000;
+}
+.dropdown-toggle::after{
+    display:none;
+}
+.bg {
+    background:url(../img/Test/testBG.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+
+.easteegg {
+    color: #D6D6D6;
+    font-family: 'SpaceMono',monospace;
+    font-weight: 400;
+    line-height: 36px;
+    font-size: 24px;
+}
+.effect {
+    letter-spacing: 4px;
+    text-shadow: #4B2D98 0 0, #4B2D98 0 0;
+    transition: text-shadow 300ms;
+}
+    .effect:hover {
+        color: #E2E2E2;
+        text-shadow: #4B2D98 -2px 2px, #4B2D98 2px 2px;
+    }
+a:hover{
+    color:#fff;
+    text-decoration:none;
+}
+section{
+    margin-top:200px;
+}
+ 
+    /*```````````````````````````````````````*/
+.checkbox-btn {
+    display: inline-block;
+    user-select: none;
+    position: relative;
+}
+
+.checkbox-btn input[type=checkbox] {
+        opacity: 0;
+        display: block;
+        width: 0;
+        height: 0;
+}
+
+.checkbox-btn span {
+        display: inline-block;
+        cursor: pointer;
+        display: flex;
+        background-color: rgba(255, 255, 255, 0.1);
+        text-align: center;
+        justify-content: center;
+        padding: 8px 24px;
+        width: fit-content;
+        border-radius: 104px;
+        transition: 0.3s ease all;
+        cursor: pointer;
+        margin-right: 1rem;
+        outline: none;
+
+        font-family: 'Open-Sans', sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 33px;
+        letter-spacing: 0.03rem;
+        color: #fff;
+
+}
+
+    .checkbox-btn span:hover {
+        background: #7B61FF;
+        transition: 0.3s ease all;
+    }
+
+.checkbox-btn input[type=checkbox]:checked + span {
+        background: #7B61FF;
+ }
+
+.focused span {
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.checkbox-btn:hover {
+   color:#fff;
+}
+
+.checkbox-btn input[type=checkbox]:active:not(:disabled) + span {
+    background: #7B61FF;
+    color: #fff;
+}
+
+.checkbox-btn input[type=checkbox]:disabled + span {
+    background: #808080;
+    color: #fff;
+    cursor: default;
+}
+
+.checkbox-btn input[type=checkbox]:checked:disabled + span {
+    background: #808080;
+}
+/*```````````````````````````````````````````````````*/
+label{
+    margin:0;
+}
+[data-tooltip]{
+    position:relative;
+}
+
+    [data-tooltip]::after {
+        content: attr(data-tooltip);
+        pointer-events:none;
+        position: absolute;
+        width: fit-content;
+        padding: 8px;
+        left: 0;
+        top: 0;
+        background: rgba(255, 255, 255, 0.1);
+        opacity: 0;
+        transition: 0.1s;
+        color: #fff;
+        border-radius: 16px;
+
+        font-family: 'Open-Sans', sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 33px;
+        letter-spacing: 0.03rem;
+        color: #fff;
+    }
+[data-tooltip]:hover::after{
+    opacity:1;
+    top: 4rem;
+    cursor:none
+}

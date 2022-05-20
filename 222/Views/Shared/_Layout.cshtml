@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]Landing page</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/Account.css" />
+    @RenderSection("AccountStyles", required: false)
+    @RenderSection("HomeStyles", required: false)
+    @RenderSection("testStyles", required: false)
+    @RenderSection("headerStyles", required: false)
+
+    @* Fonts (old)*@
+    @*
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+    *@
+    @* Fonts (new)*@
+
+    @*Open Sans*@
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+    @*Cuprum*@
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    @*Space mono*@
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section style="margin-top:0px;">
+        <header>
+            <div class="mainhead">
+                <div class="rhead">
+                    <img src="~/img/header/logo.svg" style="width:17%;" />
+                </div>
+                <div class="lhead">
+                    <div class="nav-item-blobus" style="padding-right:32px;">
+                        <div class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M2 12H22" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M12 2C14.5013 4.73835 15.9228 8.29203 16 12C15.9228 15.708 14.5013 19.2616 12 22C9.49872 19.2616 8.07725 15.708 8 12C8.07725 8.29203 9.49872 4.73835 12 2V2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="dropdown-menu mt-3" style="background-color: rgba(255, 255, 255, 0.3);">
+                            <a class="dropdown-item bodyXl" href="#">Rus</a>
+                            <a class="dropdown-item bodyXl" href="#">Eng</a>
+                        </div>
+                    </div>
+                    <div class="button_home bodyM" style="color:#fff;">
+                        <a>Log in</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        @RenderBody()
+    </section>
+    @*<div>
+    <main role="main">
+    @RenderBody()
+    </main>
+    </div>
+    *@
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    @await RenderSectionAsync("AccountScripts", required: false)
+    @await RenderSectionAsync("HomeScripts", required: false)
+    @await RenderSectionAsync("testScripts", required: false)
+    @await RenderSectionAsync("headerScripts", required: false)
+    @await RenderSectionAsync("easteregg_designScripts", required: false)
+</body>
+</html>
