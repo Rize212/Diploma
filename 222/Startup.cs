@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
+
 namespace _222
 {
     public class Startup
@@ -22,6 +23,7 @@ namespace _222
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
             services.AddControllersWithViews();
         }
 
@@ -36,17 +38,32 @@ namespace _222
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+
+            app.UseDeveloperExceptionPage();
+
+            app.UseHttpsRedirection();
+
+
             app.UseStaticFiles();
 
             app.UseRouting();
 
             app.UseAuthorization();
 
+
+            app.UseAuthentication();
+
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
+
                     pattern: "{controller=Account}/{action=Log_in}/{id?}");
+=======
+                    pattern: "{controller=Account}/{action=Registration}/{id?}");
+
             });
         }
     }
