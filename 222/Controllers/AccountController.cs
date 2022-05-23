@@ -3,25 +3,97 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity;
+using _222.Models;
+using _222.ViewModels;
+using System.ComponentModel.DataAnnotations;
 
-// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
 
 namespace _222.Controllers
 {
-    public class AccountController : Controller
-    {
-        // GET: /<controller>/
-        public IActionResult Log_in()
+  
+    
+        public class AccountController : Controller
         {
-            return View();
+            private readonly UserManager<User> _userManager;
+            private readonly SignInManager<User> _signInManager;
+
+            public AccountController(UserManager<User> userManager, SignInManager<User> signInManager)
+            {
+                _userManager = userManager;
+                _signInManager = signInManager;
+            }
+            [HttpGet]
+            public IActionResult Registration()
+            {
+                return View();
+            }
+            [HttpPost]
+            public async Task<IActionResult> Registration(RegisterViewModel model)
+            {
+                if (ModelState.IsValid)
+                {
+                    User user = new User { UserName = model.Email, Email = model.Email, Year = model.Year};
+                    // добавляем пользователя
+                    var result = await _userManager.CreateAsync(user, model.Password);
+                    if (result.Succeeded)
+                    {
+                        // установка куки
+                        await _signInManager.SignInAsync(user, false);
+                        return RedirectToAction("Home","Home");
+                    }
+                    else
+                    {
+                        foreach (var error in result.Errors)
+                        {
+                            ModelState.AddModelError(string.Empty, error.Description);
+                        }
+                    }
+                }
+                return View(model);
+            }
+        [HttpGet]
+        public IActionResult Login(string returnUrl = null)
+        {
+            return View(new LoginViewModel { ReturnUrl = returnUrl });
         }
-        public IActionResult Registration()
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login(LoginViewModel model)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                var result =
+                   await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, false);
+                if (result.Succeeded)
+                {
+                    // проверяем, принадлежит ли URL приложению
+                    if (!string.IsNullOrEmpty(model.ReturnUrl) && Url.IsLocalUrl(model.ReturnUrl))
+                    {
+                        return Redirect(model.ReturnUrl);
+                    }
+                    else
+                    {
+                        return RedirectToAction("Home", "Home");
+                    }
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Неправильный логин и (или) пароль");
+                }
+            }
+            return View(model);
         }
-        public IActionResult Home()
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Logout()
         {
-            return View();
+            // удаляем аутентификационные куки
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Home", "Home");
         }
     }
-}
+    }
