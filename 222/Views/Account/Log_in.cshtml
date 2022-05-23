@@ -1,3 +1,4 @@
+
 ﻿@model _222.ViewModels.LoginViewModel
 <head>
     <link rel="stylesheet" href="wwwroot/css/Home.css" />
@@ -13,6 +14,17 @@
                 </div>
                 <div class="col-5 bg-white registration p-0">
 
+﻿
+<section class="bg d-flex flex-column justify-content-center">
+    <div class="container">
+        <div class="row d-flex ">
+
+            <div class="col-6 d-flex align-items-center justify-content-center">
+                <img src="~/Img/header/logo.svg" width="100" height="100" />
+
+            </div>
+            <div class="col-5 bg-white registration p-0">
+
                     <h1 class="pt-5 pl-4 mb-0 ">Log In</h1>
                     <p class="bodyL pl-4 mb-4">New user? <a class="text-decoration-none" href="~/Account/Registration" style="color:#0078FF">Create account</a></p>
 
@@ -20,6 +32,7 @@
                         <label asp-for="Email" class="bodyS ml-4 " style="color:#575757">E-mail</label>
                         <input asp-for="Email" class="ml-4" type="text" placeholder="Write your e-mail here" />
                     </div>
+
 
                     <div class="me-5">
                         <label asp-for="Password" class="bodyS ml-4 mt-4 mb-2" style="color:#575757">Password</label>
@@ -31,6 +44,16 @@
                             <input type="submit" value="Continue" class="button bodyL mb-0 text-decoration-none" style="color:#fff">
                            
                         </div>
+
+                <div class="me-5">
+                    <label class="bodyS ml-4 mt-4 mb-2" style="color:#575757">Password</label>
+                    <input class="ml-4 " type="password" />
+                    <p class="bodyM mt-2 m-4" style="text-align:right"> <a class="text-decoration-none" href="#" style="color:#0078FF">Forgot Password</a></p>
+                </div>
+                <div class="d-flex justify-content-end mt-4 mr-4">
+                    <div class="button">
+                        <a class="bodyL mb-0 text-decoration-none" style="color:#ffffff" href="~/Home/Home">Continue</a>
+
                     </div>
 
                 </div>
@@ -40,5 +63,17 @@
 
             </div>
         </div>
+
     </form>
 </body>
+
+    </div>
+</section>
+@section AccountStyles {
+    <link rel="stylesheet" href="~/css/Account.css" />
+}
+
+@section AccountScripts{
+    <script src=""></script>
+}
+

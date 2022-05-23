@@ -87,6 +87,7 @@ namespace _222.Controllers
             return View(model);
         }
 
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Logout()
@@ -95,5 +96,6 @@ namespace _222.Controllers
             await _signInManager.SignOutAsync();
             return RedirectToAction("Home", "Home");
         }
+
     }
     }
