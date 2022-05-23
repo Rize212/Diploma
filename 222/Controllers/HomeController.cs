@@ -23,6 +23,7 @@ namespace _222.Controllers
             return View();
         }
 
+
         public IActionResult Privacy()
         {
             return View();

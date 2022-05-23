@@ -7,10 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using _222.Data;
-using _222.Models;
+
 
 namespace _222
 {
@@ -28,20 +25,6 @@ namespace _222
         {
 
             services.AddControllersWithViews();
-            services.AddDbContext<ApplicationContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-
-            services.AddIdentity<User, IdentityRole>(opts=>
-            {
-                opts.Password.RequiredLength = 6;   
-                opts.Password.RequireNonAlphanumeric = false;  
-                opts.Password.RequireLowercase = false; 
-                opts.Password.RequireUppercase = true; 
-                opts.Password.RequireDigit = false; 
-            })
-                    
-                .AddEntityFrameworkStores<ApplicationContext>();
-            services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -56,9 +39,11 @@ namespace _222
                 app.UseExceptionHandler("/Home/Error");
             }
 
+
             app.UseDeveloperExceptionPage();
 
             app.UseHttpsRedirection();
+
 
             app.UseStaticFiles();
 
@@ -66,13 +51,19 @@ namespace _222
 
             app.UseAuthorization();
 
+
             app.UseAuthentication();
+
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
+
+                    pattern: "{controller=Account}/{action=Log_in}/{id?}");
+=======
                     pattern: "{controller=Account}/{action=Registration}/{id?}");
+
             });
         }
     }

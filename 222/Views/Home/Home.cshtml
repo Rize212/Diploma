@@ -1,9 +1,18 @@
-﻿
+
+﻿<head>
+<link rel="stylesheet" href="~/css/Home.css" />
+<link rel="stylesheet" href="~/css/header.css" />
+</head>
+
 <section style="margin-top:0px;">
     <div class="block1">
         <div class="row d-flex align-items-center" style="margin-left:5rem;margin-right:5rem;">
             <div class="col-5 d-flex p-0">
-                <img src="~/img/block1/block1-paper.svg" style="margin-top:20%" />
+
+                <img src="~/img/block1/block1-paper.svg" style="margin-top:20%; margin-left:20%;" class="img-fluid"/>
+
+               
+
             </div>
             <div class="col-1">
             </div>
@@ -15,7 +24,11 @@
                 </h1>
                 <div class="col-4 p-0">
                     <div class="button_home" style="margin-top: 32px;">
-                        <a class="button_font" style="text-decoration:none; color: #fff;" href="#">Go Forward</a>
+
+                        <a class="button_font" style="text-decoration:none; color: #fff;" href="~/Test/test">Go Forward</a>
+
+     
+
                     </div>
                 </div>
             </div>
@@ -63,7 +76,9 @@
             </div>
         </div>
         <div class="d-flex" style="margin-right:10%;">
-            <img src="~/img/block3/twin_phones.svg" />
+
+            <img src="~/img/block3/twin_phones.svg" class="img-fluid"/>
+
         </div>
     </div>
 </section>
@@ -79,7 +94,9 @@
             </div>
         </div>
         <div class="d-flex" style="margin-right:15%;">
-            <img src="~/img/block3/text.png" />
+
+            <img src="~/img/block3/text.png" style="height:90%" />
+
         </div>
     </div>
 </section>
@@ -95,7 +112,9 @@
             </div>
         </div>
         <div class="d-flex" style="margin-right:10%;">
-            <img src="~/img/block3/film.svg" />
+
+            <img src="~/img/block3/film.svg" class="img-fluid" />
+
         </div>
     </div>
 </section>
@@ -114,13 +133,52 @@
 </section>
 <section>
 
+    @* Line 1*@
+    <div class="row justify-content-between">
+        <div class="col-1">
+        </div>
+        <div class=" col-3 features">
+            <h3 style="margin-bottom:0.5rem;">Pick a movie?<br /> We can!</h3>
+            <p class="bodyL">Our service, created specifically to save your time, can easily cope with this task. Have fun!</p>
+        </div>
+        <div class="col-3 features">
+            <h3 style="margin-bottom:0.5rem;">We are unique!</h3>
+            <p class="bodyL">Our service does not have a full-fledged analogue ;) Please understand and forgive the developers for their mistakes and shortcomings. We have no one to take an example from, because we are unique.</p>
+        </div>
+        <div class="col-1">
+        </div>
+    </div>
+    @* Line 2*@
+    <div class="row justify-content-between" style="margin-top:64px;">
+        <div class="col-1">
+        </div>
+        <div class=" col-3 features">
+            <h3 style="margin-bottom:0.5rem;">Our service is completely <br /> FREE to use!</h3>
+            <p class="bodyL">We are well aware that times are hard now, and money is earned with even more <br /> difficulty than before.</p>
+        </div>
+        <div class="col-3 features">
+            <h3 style="margin-bottom:0.5rem;">We’re a young<br /> development team!</h3>
+            <p class="bodyL">This service was created by a team of 2 people under the age of twenty. We hope you enjoy :)</p>
+        </div>
+        <div class="col-1">
+        </div>
+    </div>
+</section>
+<section>
+    <div class="contact_us img-fluid" style="height:700px;">
+        <div>
+            <h2 class="d-flex justify-content-center" style="color:white;">Become a part of community right now!</h2>
+            <div class="button_home" style="margin:32px auto auto;">
+                <a class="bodyXL" style="color:white;text-decoration:none;" href="~/Test/test">Start my way</a>
+            </div>
+        </div>
+    </div>
 </section>
 
-
-@section HomeStyles{
-<link rel="stylesheet" href="~/css/Home.css" />
+@section HomeScripts{
+<script src=""></script>
 }
 
-@section HomeScripts{
+@section headerScripts{
 <script src=""></script>
 }

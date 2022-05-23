@@ -1,0 +1,78 @@
+﻿/*~~~HEADER START~~~*/
+header {
+    height: 66px;
+    width: 100vw;
+    display: block;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0,0,0, 0.3);
+}
+
+.nav-item-blobus svg path {
+    transition: 0.3s ease all;
+}
+
+.nav-item-blobus svg:hover path {
+    stroke: #378EF0;
+    transition: 0.3s ease all;
+}
+
+.nav-item-blobus svg:active path {
+    stroke: #1079F0;
+}
+
+.nav-item-blobus svg:focus path {
+    stroke: #1079F0;
+}
+
+.mainhead {
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.rhead {
+    margin-left: 5rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.lhead {
+    margin-right: 5rem;
+    display: flex;
+    align-items: center;
+}
+
+.nav-item-blobus {
+    cursor: pointer;
+}
+
+.button_home {
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 8px 16px;
+    width: fit-content;
+    border: 2px;
+    border-radius: 104px;
+    transition: 0.3s ease all;
+    cursor:pointer;
+}
+
+    .button_home:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+.button_font {
+    font-family: 'Open-Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 33px;
+    letter-spacing: 0.03rem;
+    color: #fff;
+}
