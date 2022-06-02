@@ -17,6 +17,10 @@ header {
     transition: 0.3s ease all;
 }
 
+.nav-item-blobus svg:disabled path{
+stroke:#e4e4e4;
+}
+
 .nav-item-blobus svg:active path {
     stroke: #1079F0;
 }

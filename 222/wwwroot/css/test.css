@@ -30,6 +30,10 @@
         color: #E2E2E2;
         text-shadow: #4B2D98 -2px 2px, #4B2D98 2px 2px;
     }
+a {
+    color: #fff;
+    text-decoration: none;
+}
 a:hover{
     color:#fff;
     text-decoration:none;
@@ -64,7 +68,8 @@ section{
         border-radius: 104px;
         transition: 0.3s ease all;
         cursor: pointer;
-        margin-right: 1rem;
+        margin-right:1rem;
+        margin-bottom:0.5rem;
         outline: none;
 
         font-family: 'Open-Sans', sans-serif;
