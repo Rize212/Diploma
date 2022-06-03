@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"]Landing page</title>
+    @*<title>@ViewData["Title"]Landing page</title>*@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/Account.css" />
     @RenderSection("AccountStyles", required: false)
@@ -41,61 +41,60 @@
 <body>
     <section style="margin-top:0px;">
         <header>
-            @*<div class="mainhead">
-                <div class="rhead">
-                    <a href="~/Home/Home"><img src="~/img/header/logo.svg" style="width:17%;" /></a>
-                </div>
-                <div class="lhead">
-                    <div class="nav-item-blobus" style="padding-right:32px;">
-                        <div class="dropdown-toggle" type="checkbox" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M2 12H22" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M12 2C14.5013 4.73835 15.9228 8.29203 16 12C15.9228 15.708 14.5013 19.2616 12 22C9.49872 19.2616 8.07725 15.708 8 12C8.07725 8.29203 9.49872 4.73835 12 2V2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </div>
-                        <div class="dropdown-menu mt-3" style="background-color: rgba(255, 255, 255, 0.5);">
-                            <a class="dropdown-item bodyXl" href="#">Rus</a>
-                            <a class="dropdown-item bodyXl" href="#">Eng</a>
-                        </div>
-                    </div>
-                    <div class="button_home bodyM" style="color:#fff;">
-                        <a href="~/Account/Log_in" style="color:#fff; text-decoration:none;">Log in</a>
-                    </div>
-                </div>
-            </div>*@
+
             @if (User.Identity.IsAuthenticated)
             {
-                <img src="/img/header/user_icon.svg" />
-                <div class="button_home bodyM" style="color:#fff;">
-                    <a href="~/Account/Log_in" style="color:#fff; text-decoration:none;">Log out</a>
+                <div class="mainhead">
+                    <div class="rhead">
+                        <a href="~/Home/Home"><img src="~/img/header/logo.svg" style="width:17%;" /></a>
+                    </div>
+                    <div class="lhead">
+                        <div class="nav-item-blobus" style="padding-right:32px;">
+                            <div class="dropdown-toggle" type="checkbox" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M2 12H22" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M12 2C14.5013 4.73835 15.9228 8.29203 16 12C15.9228 15.708 14.5013 19.2616 12 22C9.49872 19.2616 8.07725 15.708 8 12C8.07725 8.29203 9.49872 4.73835 12 2V2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="dropdown-menu mt-3" style="background-color: rgba(255, 255, 255, 0.5);">
+                                <a class="dropdown-item bodyXl" href="#">Rus</a>
+                                <a class="dropdown-item bodyXl" href="#">Eng</a>
+                            </div>
+                        </div>
+                         <img style="margin-right:24px;" src="/img/header/user_icon.svg" />
+                        <div class="button_home bodyM" style="color:#fff;">
+                            <a href="~/Account/Log_in" style="color:#fff; text-decoration:none;">Log out</a>
+                        </div>
+                    </div>
                 </div>
+               
             }
             else
             {
-                 <div class="mainhead">
-                <div class="rhead">
-                    <a href="~/Home/Home"><img src="~/img/header/logo.svg" style="width:17%;" /></a>
-                </div>
-                <div class="lhead">
-                    <div class="nav-item-blobus" style="padding-right:32px;">
-                        <div class="dropdown-toggle" type="checkbox" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M2 12H22" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M12 2C14.5013 4.73835 15.9228 8.29203 16 12C15.9228 15.708 14.5013 19.2616 12 22C9.49872 19.2616 8.07725 15.708 8 12C8.07725 8.29203 9.49872 4.73835 12 2V2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
+                <div class="mainhead">
+                    <div class="rhead">
+                        <a href="~/Home/Home"><img src="~/img/header/logo.svg" style="width:17%;" /></a>
+                    </div>
+                    <div class="lhead">
+                        <div class="nav-item-blobus" style="padding-right:32px;">
+                            <div class="dropdown-toggle" type="checkbox" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M2 12H22" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M12 2C14.5013 4.73835 15.9228 8.29203 16 12C15.9228 15.708 14.5013 19.2616 12 22C9.49872 19.2616 8.07725 15.708 8 12C8.07725 8.29203 9.49872 4.73835 12 2V2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div class="dropdown-menu mt-3" style="background-color: rgba(255, 255, 255, 0.5);">
+                                <a class="dropdown-item bodyXl" href="#">Rus</a>
+                                <a class="dropdown-item bodyXl" href="#">Eng</a>
+                            </div>
                         </div>
-                        <div class="dropdown-menu mt-3" style="background-color: rgba(255, 255, 255, 0.5);">
-                            <a class="dropdown-item bodyXl" href="#">Rus</a>
-                            <a class="dropdown-item bodyXl" href="#">Eng</a>
+                        <div class="button_home bodyM" style="color:#fff;">
+                            <a href="~/Account/Log_in" style="color:#fff; text-decoration:none;">Log in</a>
                         </div>
                     </div>
-                    <div class="button_home bodyM" style="color:#fff;">
-                        <a href="~/Account/Log_in" style="color:#fff; text-decoration:none;">Log in</a>
-                    </div>
                 </div>
-            </div>
             }
         </header>
         @RenderBody()
